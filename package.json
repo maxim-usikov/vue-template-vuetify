@@ -1,6 +1,6 @@
 {
-  "name": "TODO: CHANGE ME",
-  "version": "0.0.1",
+  "name": "vue-template-vuetify",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

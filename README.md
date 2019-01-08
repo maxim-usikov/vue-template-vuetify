@@ -1,4 +1,4 @@
-# TODO: CHANGE PROJECT NAME
+# vue-template-vuetify
 
 ## Project setup
 ```
