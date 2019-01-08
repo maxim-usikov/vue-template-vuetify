@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { APP_HOME } from '@/plugins/router/modules/00_app';
+import { APP_HOME } from '@/plugins/vue-router/modules/00_app';
 
 const msgs = [
   "There's nothing here.",
