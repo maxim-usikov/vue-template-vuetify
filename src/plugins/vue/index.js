@@ -1,5 +1,7 @@
 import Vue from 'vue';
 
+const IS_PRODUCTION = process.env.NODE_ENV === 'production';
+
 // NOTE: just global Vue configuration.
 //
 // TODO:
@@ -19,7 +21,7 @@ Vue.config.silent = false;
  *
  * @see: https://vuejs.org/v2/api/#devtools
  */
-Vue.config.devtools = false;
+Vue.config.devtools = !IS_PRODUCTION;
 
 /**
  * Assign a handler for uncaught errors during component render function and
@@ -73,4 +75,4 @@ Vue.config.performance = false;
  *
  * @see: https://vuejs.org/v2/api/#productionTip
  */
-Vue.config.productionTip = false;
+Vue.config.productionTip = !IS_PRODUCTION;
