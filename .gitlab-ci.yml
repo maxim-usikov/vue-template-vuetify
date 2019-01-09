@@ -6,7 +6,6 @@ stages:
 
 # Official framework image. Look for the different tagged releases at:
 # https://hub.docker.com/r/library/node/tags/
-# NOTE: For semantic-release node should be >= 8.3
 image: node:8
 
 # This folder is cached between builds
@@ -44,6 +43,7 @@ build app:
   only:
     - master
 
+# NOTE: For semantic-release node should be >= 8.3
 release:
   stage: release
   script:
