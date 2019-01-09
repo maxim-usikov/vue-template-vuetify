@@ -2,7 +2,7 @@ const CACHE = {};
 
 // https://webpack.js.org/guides/dependency-management/#context-module-api
 function importAll(r) {
-  r.keys().forEach((key) => {
+  r.keys().forEach(key => {
     const module = r(key);
     if (module.default && Array.isArray(module.default)) {
       CACHE[key] = module;

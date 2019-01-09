@@ -1,12 +1,8 @@
 <template>
   <div>
     <h1>NotFound</h1>
-    <blockquote :class="$style['message']">
-      {{ getMsg() }}
-    </blockquote>
-    <button @click="handleHome">
-      Take me home!
-    </button>
+    <blockquote :class="$style['message']">{{ getMsg() }}</blockquote>
+    <button @click="handleHome">Take me home!</button>
   </div>
 </template>
 

@@ -1,7 +1,5 @@
 <template>
-  <VLayout>
-    <h1>TODO: AppHome</h1>
-  </VLayout>
+  <VLayout> <h1>TODO: AppHome</h1> </VLayout>
 </template>
 
 <script>
