@@ -15,7 +15,7 @@ module.exports = {
     sourceType: 'module',
   },
 
-  extends: ['plugin:vue/recommended', '@vue/airbnb'],
+  extends: ['plugin:vue/recommended', '@vue/airbnb', '@vue/prettier'],
 
   rules: {
     'no-console': isProduction ? 'error' : 'off',
