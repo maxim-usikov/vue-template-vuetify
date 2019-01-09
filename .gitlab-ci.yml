@@ -48,6 +48,8 @@ release:
   stage: release
   script:
     - yarn semantic-release
+  only:
+    - master
 
 # Pipelines starting with `.` - skipped.
 # TODO: implement
