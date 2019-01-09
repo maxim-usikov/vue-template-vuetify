@@ -92,6 +92,7 @@ TODO:
 ├── husky.config.js
 ├── jest.config.js
 ├── jsconfig.json
+├── lint-staged.config.js
 ├── package.json
 ├── postcss.config.js
 ├── vue.config.js
