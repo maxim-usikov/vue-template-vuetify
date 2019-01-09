@@ -4,7 +4,7 @@
  */
 module.exports = {
   linters: {
-    '*.{js,jsx,vue}': ['yarn run lint', 'git add'],
+    '*.{js,jsx,vue}': ['yarn lint', 'git add'],
   },
   ignore: [],
 };
