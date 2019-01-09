@@ -1,6 +1,6 @@
 module.exports = {
   branch: 'master',
-  tagFormat: 'v${version}',
+  tagFormat: '${version}',
   dryRun: false,
   ci: false,
   debug: false,
