@@ -88,6 +88,7 @@ TODO:
 ├── LICENSE
 ├── README.md
 ├── babel.config.js
+├── commitlint.config.js
 ├── jest.config.js
 ├── jsconfig.json
 ├── package.json
