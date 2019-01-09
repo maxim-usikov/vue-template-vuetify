@@ -1,10 +1,7 @@
-# This file is a template, and might need editing before it works on your
-# project.
-
 stages:
-  - lint
   - test
   - build
+  - release
   - deploy
 
 # Official framework image. Look for the different tagged releases at:
@@ -18,22 +15,20 @@ cache:
   - node_modules/
 
 lint app:
-  stage: lint
+  stage: test
   script:
     - yarn install --no-progress
     - yarn lint
   only:
     - master
-    - CI-test
 
-test:unit:
+test unit:
   stage: test
   script:
     - yarn install --no-progress
     - yarn test:unit
   only:
     - master
-    - CI-test
 
 build app:
   stage: build
@@ -47,4 +42,16 @@ build app:
       - dist
   only:
     - master
-    - CI-test
+
+# NOTE: For semantic-release node should be >= 8.3
+release:
+  stage: release
+  script:
+    - yarn semantic-release
+  only:
+    - master
+
+# Pipelines starting with `.` - skipped.
+# TODO: implement
+.deploy:
+  stage: deploy

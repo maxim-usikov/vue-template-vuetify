@@ -1,11 +1,10 @@
-var isProduction = process.env.NODE_ENV === 'production';
+const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 module.exports = {
   root: true,
 
   env: {
     node: true,
-    // TODO: temp solution.
     jest: true,
   },
 
@@ -15,11 +14,11 @@ module.exports = {
     sourceType: 'module',
   },
 
-  extends: ['plugin:vue/recommended', '@vue/airbnb'],
+  extends: ['plugin:vue/recommended', '@vue/airbnb', '@vue/prettier'],
 
   rules: {
-    'no-console': isProduction ? 'error' : 'off',
-    'no-debugger': isProduction ? 'error' : 'off',
+    'no-console': IS_PRODUCTION ? 'error' : 'off',
+    'no-debugger': IS_PRODUCTION ? 'error' : 'off',
     'vue/prop-name-casing': 'error',
     'vue/html-closing-bracket-spacing': 'error',
     'vue/html-closing-bracket-newline': [

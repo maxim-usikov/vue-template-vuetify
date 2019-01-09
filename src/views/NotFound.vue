@@ -1,17 +1,13 @@
 <template>
   <div>
     <h1>NotFound</h1>
-    <blockquote :class="$style['message']">
-      {{ getMsg() }}
-    </blockquote>
-    <button @click="handleHome">
-      Take me home!
-    </button>
+    <blockquote :class="$style['message']">{{ getMsg() }}</blockquote>
+    <button @click="handleHome">Take me home!</button>
   </div>
 </template>
 
 <script>
-import { APP_HOME } from '@/plugins/router/modules/00_app';
+import { APP_HOME } from '@/plugins/vue-router/modules/00_app';
 
 const msgs = [
   "There's nothing here.",
