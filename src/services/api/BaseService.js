@@ -130,7 +130,7 @@ class BaseService {
    * @see https://docs.feathersjs.com/api/services.html#oneventname-listener
    */
   async removeListener(eventname, listener) {
-    return this.removeListener(eventname, listener);
+    return this.service.removeListener(eventname, listener);
   }
 }
 
