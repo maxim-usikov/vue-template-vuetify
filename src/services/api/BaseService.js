@@ -95,14 +95,40 @@ class BaseService {
     return this.service.remove(id, params);
   }
 
+  /**
+   * Listen to a normal service event.
+   *
+   * @param {string} eventname - Имя события.
+   * @param {Function} listener - Функция обработчик.
+   * @return {Promise<object>}
+   *
+   * @see https://docs.feathersjs.com/api/services.html#oneventname-listener
+   */
   async on(eventname, listener) {
     return this.service.on(eventname, listener);
   }
 
+  /**
+   * Only listen to an event once.
+   *
+   * @param {string} eventname - Имя события.
+   * @param {Function} listener - Функция обработчик.
+   * @return {Promise<object>}
+   *
+   */
   async once(eventname, listener) {
     return this.service.once(eventname, listener);
   }
 
+  /**
+   * Unbind event listener.
+   *
+   * @param {string} eventname - Имя события.
+   * @param {Function} listener - Функция обработчик.
+   * @return {Promise<object>}
+   *
+   * @see https://docs.feathersjs.com/api/services.html#oneventname-listener
+   */
   async removeListener(eventname, listener) {
     return this.removeListener(eventname, listener);
   }
