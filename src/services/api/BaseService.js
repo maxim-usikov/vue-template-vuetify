@@ -132,6 +132,19 @@ class BaseService {
   async removeListener(eventname, listener) {
     return this.service.removeListener(eventname, listener);
   }
+
+  /**
+   * Send a custom event.
+   *
+   * @param {string} eventname - Имя события.
+   * @param {object} data - Данные.
+   * @return {Promise<object>}
+   *
+   * @see https://docs.feathersjs.com/api/services.html#oneventname-listener
+   */
+  async emit(eventname, data) {
+    return this.service.emit(eventname, data);
+  }
 }
 
 export default BaseService;
